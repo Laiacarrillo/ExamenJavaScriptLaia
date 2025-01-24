@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-500 h-screen flex justify-center items-center">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Inicio de sesión</h2>
+        
+        <form id="loginForm">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Introduce tu correo" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300" ">
+                Iniciar sesión
+            </button>
+        </form>
+
+        <div class="text-center mt-4">
+            <a href="#" class="text-blue-500 text-sm hover:underline">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="text-sm text-gray-600">¿No tienes cuenta? 
+                <a href="Registro.html" class="text-blue-500 hover:underline">Regístrate</a>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const response = await fetch('http://localhost:3000/usuarios');
+            const users = await response.json();
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                alert('Inicio de sesión exitoso!');
+                localStorage.setItem('user', JSON.stringify(user))
+                window.location.href = 'index.html';
+            } else {
+                alert('Correo o contraseña incorrectos.');
+            }
+        });
+    </script>
+
+</html>

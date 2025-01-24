@@ -1,0 +1,27 @@
+{
+  "usuarios": [
+    {
+      "email": "rogeliopaez793@gmail.com",
+      "password": "laia",
+      "id": 1
+    },
+    {
+      "email": "laa@gmail.com",
+      "password": "1234",
+      "id": 2
+    }
+  ],
+  "tareas": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "description": "typicode",
+      "estado": "pendiente"
+    },
+    {
+      "texto": "la tarea",
+      "completada": false,
+      "id": 2
+    }
+  ]
+}

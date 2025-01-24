@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Tarea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="AgregarTarea.js"></script>
+</head>
+<body class="bg-gray-500 h-screen flex justify-center items-center">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Agregar Tarea</h2>
+        
+        <form id="loginForm">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Titulo de la tarea</label>
+                <input type="text" id="Titulo" name="Titulo" placeholder="Introduce el titulo de la tarea" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Descripción de la tarea</label>
+                <input type="text" id="Descripción" name="Descripción" placeholder="Introducte la descripción de la tarea" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Imagen (Opcional)</label>
+                <input type="image" id="Imagen" name="Imagen"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Fecha de Inicio</label>
+                <input type="date" id="Inicio" name="Inicio"  
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Fecha de Finalización</label>
+                <input type="date" id="Final" name="Final"  
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Categoria</label>
+                <input type="text" id="Inicio" name="Inicio" placeholder="Ej: Pendiente, En Proceso, Terminado"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+
+            <button onclick="crearTarea()" type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300" ">
+                    Agregar Tarea
+            </button>
+        </form>
+    </div>
+    
+</body>
+</html>

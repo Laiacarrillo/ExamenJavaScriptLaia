@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Kanban Eventos Momentum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    #texto1{
+        text-align: center;
+        top: -800%;
+        position: relative;
+
+    }
+    #texto2{
+        text-align: center;
+        top: -800%;
+        position: relative;
+
+    }
+    #texto3{
+        text-align: center;
+        top: -800%;
+        position: relative;
+
+    }
+</style>
+<body class="bg-gray-600">
+    <nav class="bg-gray-800 py-6 relative shadow-md">
+        <div class="container mx-auto flex items-center px-8 xl:px-0">
+            <div class="flex flex-grow pl-8">
+                <h1 class="text-white text-2xl font-bold -ml-2">Tablero Kanban Eventos Momentum</h1>
+            </div>
+            <div class="flex lg:hidden">
+                <img src="https://icon-library.com/images/hamburger-menu-icon-transparent/hamburger-menu-icon-transparent-3.jpg" onclick="openMenu()" alt="Menú"
+                    class="w-8 h-8 object-contain cursor-pointer">
+            </div>
+            <div id="menu" class="z-10 lg:flex hidden flex-grow justify-between items-center absolute lg:relative lg:top-0 top-20 left-0
+            bg-gray-800 w-full lg:w-auto items-center py-14 lg:py-0 px-8 sm:px-24 lg:px-0">
+            <div id="botones" class="flex flex-row justify-center lg:justify-end space-x-4 pr-8">
+                <a href="InicioSesion.html" class="text-white border border-white py-2 px-4 lg:py-1.5 lg:px-3 rounded-md hover:bg-white 
+                hover:text-gray-800 transition duration-300 ease-in-out">Inicio sesión</a>
+                <a href="Registro.html" class="text-white bg-blue-500 border border-blue-500 py-2 px-4 lg:py-1.5 lg:px-3 rounded-md hover:bg-blue-600 
+                hover:border-blue-600 transition duration-300 ease-in-out">Regístrate</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <div id="botones" class="flex justify-start p-2">
+        <a href="AgregarTarea.html" class="text-white bg-blue-500 border border-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 
+        hover:border-blue-600 transition duration-300 ease-in-out">Agregar Tarea </a>
+    </div>
+    <div>
+        <div class="container mx-auto py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-md  p-8 py-80">
+                    <h2 class="text-2xl font-bold text-gray-800"  id="texto1">Pendientes</h2>
+                </div>
+                <div class="bg-white shadow-md rounded-md p-8 py-80">
+                    <h2 class="text-2xl font-bold text-gray-800" id="texto2">En Progreso</h2>
+                </div>
+                <div class="bg-white shadow-md rounded-md p-6 py-80">
+                    <h2 class="text-2xl font-bold text-gray-800" id="texto3">Completadas</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+       
+
+    
+</body>
+</html>
