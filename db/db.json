@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "nombre": "Laia",
+      "email": "laca@gmail.com",
+      "password": "Laia2025",
+      "tasks": [],
+      "id": 1
+    }
+  ]
+}

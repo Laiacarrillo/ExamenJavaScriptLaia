@@ -1,9 +1,9 @@
-Tablero Kanban para la Agencia de Eventos "Momentum"
+### Tablero Kanban para la Agencia de Eventos "Momentum"
 
 Descripcion del proyecto
 La agencia de eventos "Momentum" requiere una aplicación web para gestionar tareas y eventos. El objetivo de este examen es construir un tablero Kanban utilizando HTML, CSS y JavaScript que permita gestionar estas tareas de manera dinámica.
 
-Requerimientos
+# Requerimientos
 
 1. Interfaz de Tablero Kanban
 2. Gestión de Tareas
@@ -16,9 +16,9 @@ Requerimientos
 9. Validación de Entradas
 10. Estilo y Diseño Responsivo
 
-Resultado esperado
+## Resultado esperado
 
-Desarrollar el tablero Kanban:
+## Desarrollar el tablero Kanban:
 
 Crear un tablero Kanban con tres columnas: Pendientes, En Progreso y Completadas.
 Implementar funcionalidades para agregar, editar, eliminar y mover tareas entre columnas.

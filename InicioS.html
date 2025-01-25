@@ -1,17 +1,13 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-gray-500 h-screen flex justify-center items-center">
-
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md justify-center content-center">
         <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Inicio de sesión</h2>
         
         <form id="loginForm">
@@ -38,32 +34,11 @@
 
         <div class="text-center mt-4">
             <p class="text-sm text-gray-600">¿No tienes cuenta? 
-                <a href="Registro.html" class="text-blue-500 hover:underline">Regístrate</a>
+                <a href="registro.html" class="text-blue-500 hover:underline">Regístrate</a>
             </p>
         </div>
     </div>
 
-
+    <script src="js/inicioS.js"></script>
 </body>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const response = await fetch('http://localhost:3000/usuarios');
-            const users = await response.json();
-
-            const user = users.find(u => u.email === email && u.password === password);
-
-            if (user) {
-                alert('Inicio de sesión exitoso!');
-                localStorage.setItem('user', JSON.stringify(user))
-                window.location.href = 'index.html';
-            } else {
-                alert('Correo o contraseña incorrectos.');
-            }
-        });
-    </script>
-
 </html>
